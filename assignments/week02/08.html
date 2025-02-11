@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        /* Basic styles for layout and responsiveness */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "main aside"
+                "footer footer";
+            grid-template-columns: 3fr 1fr; /* 75% main content, 25% sidebar */
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        main {
+            grid-area: main;
+            padding: 1rem;
+        }
+        aside {
+            grid-area: aside;
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Website</h1>
+        <nav aria-label="Main Navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- General Content Section -->
+        <section>
+            <h2>Welcome to My Website</h2>
+            <p>This is the main content area where you can share information.</p>
+        </section>
+        
+        <!-- Blog Post Layout -->
+        <article>
+            <header>
+                <h2>Blog Post Title</h2>
+                <p>Published on <time datetime="2025-02-01">February 1, 2025</time> by Author</p>
+            </header>
+            <p>This is a blog post with meaningful content using semantic elements.</p>
+            <footer>
+                <p>Tags: <a href="#">Web Development</a>, <a href="#">HTML</a></p>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Sidebar Section -->
+    <aside>
+        <h3>Related Links</h3>
+        <ul>
+            <li><a href="#">HTML Guide</a></li>
+            <li><a href="#">CSS Basics</a></li>
+            <li><a href="#">Web Accessibility</a></li>
+        </ul>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
