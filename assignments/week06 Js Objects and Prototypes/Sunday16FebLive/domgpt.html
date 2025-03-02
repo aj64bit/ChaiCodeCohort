@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Manipulation Example</title>
+    <style>
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Hello, JavaScript!</h1>
+    <button id="change-text">Change Text</button>
+
+    <script>
+      let button = document.getElementById("change-text");
+      let title = document.getElementById("main-title");
+
+      button.addEventListener("click", function () {
+        title.textContent = "Text Changed!";
+        title.classList.add("highlight");
+      });
+    </script>
+  </body>
+</html>

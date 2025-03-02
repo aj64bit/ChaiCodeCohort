@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slide Sidebar</title>
+    <style>
+      #sidebar {
+        width: 200px;
+        height: 100vh;
+        background: #333;
+        color: white;
+        position: fixed;
+        left: -200px; /* Initially hidden */
+        top: 0;
+        transition: left 0.5s ease;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sidebar">I am a Sidebar</div>
+    <button id="toggle-btn">Toggle Sidebar</button>
+
+    <script>
+      let sidebar = document.getElementById("sidebar");
+      let button = document.getElementById("toggle-btn");
+
+      button.addEventListener("click", function () {
+        if (sidebar.style.left === "-200px") {
+          sidebar.style.left = "0"; // Show Sidebar
+        } else {
+          sidebar.style.left = "-200px"; // Hide Sidebar
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript in Browser</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello, World!</h1>
+    <button id="b1" onclick="changeText()">This</button>
+
+    <script>
+      function changeText() {
+        let text = document.getElementById("heading").innerText;
+        console.log(text);
+        if (text === `Hello, World!`) {
+          document.getElementById("heading").innerText = "Hello, JavaScript!";
+        } else {
+          document.getElementById("heading").innerText = "Hello, World!";
+        }
+      }
+    </script>
+  </body>
+</html>
